@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="icon6.png" type="image/png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ScaleBusinessAI Consultancy - AI integration and custom solutions for businesses."
+    />
+    <title>ScaleBusinessAI Consultancy</title>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1d1f23;
+        color: #f4f4f4;
+      }
+      header {
+        background-color: #000000;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 3em;
+        margin: 0;
+        color: #ffffff;
+        font-weight: 700;
+      }
+      header p {
+        font-size: 1.4em;
+        color: #cccccc;
+        margin: 10px 0 30px;
+      }
+      .button {
+        background-color: #f1832a;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 30px;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: #39393f;
+      }
+      .section {
+        padding: 80px 20px; /* Increased padding for better spacing */
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .section h2 {
+        font-size: 3em; /* Larger font size for emphasis */
+        color: #ffffff;
+        margin-bottom: 30px;
+        text-transform: uppercase; /* Adds emphasis and structure */
+        letter-spacing: 1.5px; /* Slight letter spacing for clarity */
+        border-bottom: 2px solid #f45b69; /* Underline with accent color */
+        display: inline-block;
+        padding-bottom: 10px; /* Space between text and underline */
+      }
+
+      .section p {
+        font-size: 1.3em; /* Slightly larger for better readability */
+        color: #dddddd; /* Lighter text color for readability against dark background */
+        max-width: 800px;
+        margin: 0 auto 50px;
+        line-height: 1.6; /* Better line spacing for readability */
+        text-align: center;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .card {
+        background-color: #2e3137;
+        border-radius: 12px;
+        padding: 30px;
+        width: 100%;
+        max-width: 320px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+      }
+
+      .card h3 {
+        font-size: 1.8em;
+        color: #ffffff;
+        margin-bottom: 15px;
+        text-transform: capitalize; /* Capitalizes only first letters for a cleaner look */
+        letter-spacing: 1px;
+        border-left: 4px solid #f45b69; /* Accent border for visual separation */
+        padding-left: 10px;
+      }
+
+      .card p {
+        font-size: 1.2em;
+        color: #d2d2d2;
+        line-height: 1.6; /* Better readability */
+        text-align: left;
+      }
+
+      .pricing {
+        background-color: #292b30;
+        padding: 60px 20px;
+        text-align: center;
+      }
+      .pricing h2 {
+        margin-bottom: 40px;
+        color: #ffffff;
+      }
+      .pricing-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .pricing-card {
+        background-color: #35373d;
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 320px;
+        width: 100%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+      .pricing-card h3 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        color: #f45b69;
+      }
+      .pricing-card p {
+        font-size: 1.2em;
+        color: #dddddd;
+      }
+      .pricing-card strong {
+        font-size: 1.6em;
+        display: block;
+        margin-top: 10px;
+        color: #ffffff;
+      }
+      .contact-section {
+        background-color: #1d1f23;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .contact-section h2 {
+        font-size: 2.8em;
+        margin-bottom: 40px;
+        color: #ffffff;
+      }
+
+      .contact-form {
+        max-width: 700px; /* Ensures the form doesn't stretch too wide on large screens */
+        margin: 0 auto;
+        padding: 40px; /* Equal padding on all sides for balance */
+        background-color: #2e3137;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth to the form */
+      }
+
+      .contact-form label {
+        font-size: 1.2em;
+        color: #dddddd;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: calc(
+          100% - 20px
+        ); /* Adds space within the input fields to avoid touching the edges */
+        padding: 15px; /* Adequate padding inside the input fields */
+        margin-bottom: 20px;
+        border: 1px solid #444;
+        border-radius: 8px;
+        background-color: #25272c;
+        color: #f4f4f4;
+        font-size: 1.1em;
+      }
+
+      .contact-form textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .contact-form button {
+        padding: 15px 40px;
+        background-color: #f45b69;
+        color: #ffffff;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.3em;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #ff7888;
+        box-shadow: 0 4px 10px rgba(244, 91, 105, 0.4);
+      }
+
+      /* Mobile-friendly adjustments */
+      @media (max-width: 768px) {
+        .contact-form {
+          padding: 30px 15px; /* Adds balanced padding for mobile screens */
+          max-width: 100%;
+        }
+
+        .contact-section h2 {
+          font-size: 2.2em;
+          margin-bottom: 30px;
+        }
+
+        .contact-form button {
+          padding: 12px 30px;
+          font-size: 1.2em;
+        }
+      }
+
+      footer {
+        background-color: #121316;
+        color: #888888;
+        padding: 20px 0;
+        text-align: center;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        display: flex;
+        align-items: center;
+        padding: 50px 20px;
+        background-color: #000000;
+      "
+    >
+      <img
+        src="icon6.png"
+        alt="ScaleBusinessAI Logo"
+        style="width: 150px; height: 150px; margin-right: 30px"
+      />
+      <div style="flex-grow: 1; text-align: left">
+        <h1 style="font-size: 3em; margin: 0; color: #ffffff">
+          ScaleBusinessAI Consultancy
+        </h1>
+        <p style="font-size: 1.4em; color: #cccccc; margin-top: 10px">
+          Simplifying AI for Your Business — Solutions and Expertise
+        </p>
+        <a
+          href="#contact"
+          class="button"
+          style="
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #f45b69;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+          "
+        >
+          Get Your First Call Free
+        </a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>
+        AI Solutions Every Business Needs<br />
+        Without the High Costs
+      </h2>
+      <p>
+        Most businesses miss out on the power of AI because they think it's too
+        complex or expensive. At ScaleBusinessAI, we simplify AI and software
+        development—whether by teaching your team or building custom solutions
+        for you. Every business can benefit from AI, and we're here to make it
+        accessible.
+      </p>
+
+      <p>
+        Whether you're looking to understand how AI can impact your business or
+        need fully integrated AI solutions, we tailor our approach to meet your
+        specific needs.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>End-to-End AI Solutions</h3>
+          <p>
+            From concept to deployment, we build AI applications that meet the
+            unique challenges and goals of your business. Let us help you
+            integrate AI-driven solutions that create real value.
+          </p>
+        </div>
+        <div class="card">
+          <h3>AI-Powered Product Innovation</h3>
+          <p>
+            We enhance your products with intelligent AI features, improving
+            functionality, user experience, and adding value that your customers
+            will notice.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Customer Insights & Data Analysis</h3>
+          <p>
+            Use AI to analyze customer trends and behavior, providing you with
+            actionable insights that will drive smarter decision-making and more
+            effective strategies.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Email & Chatbot Automation</h3>
+          <p>
+            Leverage AI to create personalized email campaigns, automate
+            customer service with chatbots, and ensure your communications are
+            effective and scalable.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Report Generation & Team Coordination</h3>
+          <p>
+            Automate report generation and streamline team coordination using AI
+            tools. We help you simplify processes, freeing up time for
+            high-priority tasks.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Increase Profits & Lower Costs</h3>
+          <p>
+            We help you boost profits by optimizing business operations,
+            expanding product offerings, and cutting costs using AI-powered
+            efficiency improvements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <h2>Our Services</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Consultation</h3>
+          <p>
+            Discover how AI can benefit your business with a free consultation
+            to explore opportunities.
+          </p>
+          <strong>First Call Free</strong>
+        </div>
+        <div class="pricing-card">
+          <h3>AI Tool Development</h3>
+          <p>
+            We design and build custom AI tools that solve specific challenges
+            and help drive business innovation.
+          </p>
+          <strong>Contact for Pricing</strong>
+        </div>
+        <div class="pricing-card">
+          <h3>Full AI Integration</h3>
+          <p>
+            End-to-end AI integration into your workflows, ensuring scalable and
+            efficient AI solutions.
+          </p>
+          <strong>Custom Pricing</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>email: contact@scalebusinessai.com</h2>
+      <h1>or Send us a message!</h1>
+      <form id="contact-form" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Tell me about your business!</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Success and error messages -->
+      <p id="success-message" style="display: none; color: green">
+        Message sent successfully!
+      </p>
+      <p id="error-message" style="display: none; color: red">
+        Oops, something went wrong. Please try again.
+      </p>
+    </section>
+
+    <!-- Include the EmailJS script -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("AB23uUm4Jgpq7n30I"); // This initializes EmailJS with your User ID
+
+      // Form submission handling
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevents page refresh on form submit
+
+          // This sends the form data to your configured EmailJS service
+          emailjs.sendForm("service_b2hi5hm", "template_6vcw8on", this).then(
+            function () {
+              // Shows success message to the user if the email is sent successfully
+              document.getElementById("success-message").style.display =
+                "block";
+              document.getElementById("error-message").style.display = "none";
+            },
+            function (error) {
+              // Shows error message if something goes wrong
+              document.getElementById("success-message").style.display = "none";
+              document.getElementById("error-message").style.display = "block";
+            }
+          );
+        });
+    </script>
+
+    <footer>
+      <p>&copy; 2024 ScaleBusinessAI Consultancy. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
