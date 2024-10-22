@@ -6,10 +6,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="icon" href="icon6.png" type="image/png" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta
       name="description"
       content="ScaleBusinessAI Consultancy - AI integration and custom solutions for businesses."
@@ -17,69 +18,164 @@
     <title>ScaleBusinessAI Consultancy</title>
 
     <style>
+      /* General Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
         background-color: #1d1f23;
         color: #f4f4f4;
+        max-width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scroll */
       }
+
+      /* Header Styles */
       header {
         background-color: #000000;
-        padding: 80px 20px;
+        padding: 40px 20px;
         text-align: center;
       }
+
+      header img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+      }
+
       header h1 {
-        font-size: 3em;
+        font-size: 2em;
         margin: 0;
         color: #ffffff;
-        font-weight: 700;
       }
+
       header p {
-        font-size: 1.4em;
+        font-size: 1.1em;
         color: #cccccc;
-        margin: 10px 0 30px;
+        margin: 10px 0 20px;
       }
-      .button {
-        background-color: #f1832a;
+
+      header a {
+        padding: 12px 25px;
+        background-color: #f45b69;
         color: white;
-        padding: 15px 30px;
         text-decoration: none;
-        font-weight: bold;
         border-radius: 30px;
-        font-size: 1.2em;
+        font-size: 1.1em;
+        font-weight: bold;
         transition: background-color 0.3s ease;
       }
-      .button:hover {
+
+      header a:hover {
         background-color: #39393f;
       }
+      .pricing {
+        background-color: #292b30;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .pricing h2 {
+        margin-bottom: 40px;
+        color: #ffffff;
+        font-size: 2.5em;
+      }
+
+      .pricing-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .pricing-card {
+        background-color: #35373d;
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 300px;
+        width: 100%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .pricing-card h3 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        color: #f45b69;
+      }
+
+      .pricing-card p {
+        font-size: 1.2em;
+        color: #dddddd;
+        margin-bottom: 20px;
+      }
+
+      .pricing-card strong {
+        font-size: 1.6em;
+        color: #ffffff;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        .pricing-card {
+          max-width: 100%;
+        }
+
+        .pricing h2 {
+          font-size: 2em;
+        }
+
+        .pricing-card h3 {
+          font-size: 1.6em;
+        }
+
+        .pricing-card p {
+          font-size: 1.1em;
+        }
+
+        .pricing-card strong {
+          font-size: 1.4em;
+        }
+      }
+
       .section {
-        padding: 80px 20px; /* Increased padding for better spacing */
+        padding: 40px 20px;
         max-width: 1100px;
         margin: 0 auto;
         text-align: center;
       }
 
       .section h2 {
-        font-size: 3em; /* Larger font size for emphasis */
+        font-size: 2.5em;
         color: #ffffff;
         margin-bottom: 30px;
-        text-transform: uppercase; /* Adds emphasis and structure */
-        letter-spacing: 1.5px; /* Slight letter spacing for clarity */
-        border-bottom: 2px solid #f45b69; /* Underline with accent color */
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-bottom: 2px solid #f45b69;
         display: inline-block;
-        padding-bottom: 10px; /* Space between text and underline */
+        padding-bottom: 10px;
       }
 
       .section p {
-        font-size: 1.3em; /* Slightly larger for better readability */
-        color: #dddddd; /* Lighter text color for readability against dark background */
+        font-size: 1.2em;
+        color: #dddddd;
         max-width: 800px;
-        margin: 0 auto 50px;
-        line-height: 1.6; /* Better line spacing for readability */
-        text-align: center;
+        margin: 0 auto 30px;
+        line-height: 1.6;
       }
 
+      /* Flexbox for Cards */
       .cards {
         display: flex;
         flex-wrap: wrap;
@@ -87,100 +183,98 @@
         justify-content: center;
       }
 
+      /* Card Base Styles */
       .card {
         background-color: #2e3137;
         border-radius: 12px;
         padding: 30px;
         width: 100%;
-        max-width: 320px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+        max-width: 300px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         text-align: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
       .card h3 {
-        font-size: 1.8em;
+        font-size: 1.6em;
         color: #ffffff;
         margin-bottom: 15px;
-        text-transform: capitalize; /* Capitalizes only first letters for a cleaner look */
+        text-transform: capitalize;
         letter-spacing: 1px;
-        border-left: 4px solid #f45b69; /* Accent border for visual separation */
+        border-left: 4px solid #f45b69;
         padding-left: 10px;
       }
 
       .card p {
-        font-size: 1.2em;
+        font-size: 1.1em;
         color: #d2d2d2;
-        line-height: 1.6; /* Better readability */
-        text-align: left;
+        line-height: 1.6;
       }
 
-      .pricing {
-        background-color: #292b30;
-        padding: 60px 20px;
-        text-align: center;
+      /* Hover Effect for Cards */
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
       }
-      .pricing h2 {
-        margin-bottom: 40px;
-        color: #ffffff;
-      }
-      .pricing-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      }
-      .pricing-card {
+
+      /* Primary Card Styles */
+      .primary {
         background-color: #35373d;
-        padding: 30px;
-        border-radius: 12px;
-        max-width: 320px;
-        width: 100%;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #f45b69;
       }
-      .pricing-card h3 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
-        color: #f45b69;
+
+      /* Secondary Card Styles */
+      .secondary {
+        background-color: #3a3d42;
+        border-left: 4px solid #ffffff;
       }
-      .pricing-card p {
-        font-size: 1.2em;
-        color: #dddddd;
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        .cards {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .card {
+          max-width: 100%;
+        }
+
+        .section h2 {
+          font-size: 2em;
+        }
+
+        .card h3 {
+          font-size: 1.4em;
+        }
+
+        .card p {
+          font-size: 1em;
+        }
       }
-      .pricing-card strong {
-        font-size: 1.6em;
-        display: block;
-        margin-top: 10px;
-        color: #ffffff;
-      }
+      /* Contact Form Styles */
       .contact-section {
         background-color: #1d1f23;
-        padding: 80px 20px;
+        padding: 40px 20px;
         text-align: center;
       }
 
       .contact-section h2 {
-        font-size: 2.8em;
-        margin-bottom: 40px;
+        font-size: 2.2em;
+        margin-bottom: 30px;
         color: #ffffff;
       }
 
       .contact-form {
-        max-width: 700px; /* Ensures the form doesn't stretch too wide on large screens */
+        max-width: 600px;
         margin: 0 auto;
-        padding: 40px; /* Equal padding on all sides for balance */
+        padding: 30px;
         background-color: #2e3137;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth to the form */
+        border-radius: 12px;
       }
 
       .contact-form label {
-        font-size: 1.2em;
+        font-size: 1.1em;
         color: #dddddd;
         margin-bottom: 10px;
         display: block;
@@ -188,113 +282,99 @@
 
       .contact-form input,
       .contact-form textarea {
-        width: calc(
-          100% - 20px
-        ); /* Adds space within the input fields to avoid touching the edges */
-        padding: 15px; /* Adequate padding inside the input fields */
+        width: 100%;
+        padding: 12px;
         margin-bottom: 20px;
         border: 1px solid #444;
         border-radius: 8px;
         background-color: #25272c;
         color: #f4f4f4;
-        font-size: 1.1em;
+        font-size: 1em;
       }
 
       .contact-form textarea {
-        min-height: 150px;
+        min-height: 120px;
         resize: vertical;
       }
 
       .contact-form button {
-        padding: 15px 40px;
+        padding: 12px 30px;
         background-color: #f45b69;
         color: #ffffff;
         border: none;
         border-radius: 30px;
-        font-size: 1.3em;
+        font-size: 1.2em;
         cursor: pointer;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
 
       .contact-form button:hover {
         background-color: #ff7888;
-        box-shadow: 0 4px 10px rgba(244, 91, 105, 0.4);
       }
 
-      /* Mobile-friendly adjustments */
-      @media (max-width: 768px) {
-        .contact-form {
-          padding: 30px 15px; /* Adds balanced padding for mobile screens */
-          max-width: 100%;
-        }
-
-        .contact-section h2 {
-          font-size: 2.2em;
-          margin-bottom: 30px;
-        }
-
-        .contact-form button {
-          padding: 12px 30px;
-          font-size: 1.2em;
-        }
-      }
-
+      /* Footer */
       footer {
         background-color: #121316;
         color: #888888;
         padding: 20px 0;
         text-align: center;
       }
+
       footer p {
         margin: 0;
       }
+
+      /* Mobile-friendly adjustments */
+      @media (max-width: 768px) {
+        header img {
+          width: 80px;
+          height: 80px;
+        }
+
+        header h1 {
+          font-size: 1.8em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
+        header a {
+          font-size: 1em;
+          padding: 10px 20px;
+        }
+
+        .section {
+          padding: 30px 15px;
+        }
+
+        .cards {
+          flex-direction: column;
+        }
+
+        .card {
+          max-width: 100%;
+        }
+
+        .contact-form {
+          padding: 20px;
+          max-width: 100%;
+        }
+      }
     </style>
   </head>
+
   <body>
-    <header
-      style="
-        display: flex;
-        align-items: center;
-        padding: 50px 20px;
-        background-color: #000000;
-      "
-    >
-      <img
-        src="icon6.png"
-        alt="ScaleBusinessAI Logo"
-        style="width: 150px; height: 150px; margin-right: 30px"
-      />
-      <div style="flex-grow: 1; text-align: left">
-        <h1 style="font-size: 3em; margin: 0; color: #ffffff">
-          ScaleBusinessAI Consultancy
-        </h1>
-        <p style="font-size: 1.4em; color: #cccccc; margin-top: 10px">
-          Simplifying AI for Your Business — Solutions and Expertise
-        </p>
-        <a
-          href="#contact"
-          class="button"
-          style="
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #f45b69;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-          "
-        >
-          Get Your First Call Free
-        </a>
+    <header>
+      <img src="icon6.png" alt="ScaleBusinessAI Logo" />
+      <div>
+        <h1>ScaleBusinessAI Consultancy</h1>
+        <p>Simplifying AI for Your Business — Solutions and Expertise</p>
+        <a href="#contact" class="button">Get Your First Call Free</a>
       </div>
     </header>
 
     <section class="section">
-      <h2>
-        AI Solutions Every Business Needs<br />
-        Without the High Costs
-      </h2>
+      <h2>AI Solutions Every Business Needs<br />Without the High Costs</h2>
       <p>
         Most businesses miss out on the power of AI because they think it's too
         complex or expensive. At ScaleBusinessAI, we simplify AI and software
@@ -308,32 +388,33 @@
         need fully integrated AI solutions, we tailor our approach to meet your
         specific needs.
       </p>
+
       <div class="cards">
-        <div class="card">
+        <div class="card primary">
           <h3>End-to-End AI Solutions</h3>
           <p>
             From concept to deployment, we build AI applications that meet the
-            unique challenges and goals of your business. Let us help you
-            integrate AI-driven solutions that create real value.
+            unique challenges and goals of your business.
           </p>
         </div>
-        <div class="card">
+
+        <div class="card secondary">
           <h3>AI-Powered Product Innovation</h3>
           <p>
             We enhance your products with intelligent AI features, improving
-            functionality, user experience, and adding value that your customers
-            will notice.
+            functionality and user experience.
           </p>
         </div>
-        <div class="card">
+
+        <div class="card primary">
           <h3>Customer Insights & Data Analysis</h3>
           <p>
             Use AI to analyze customer trends and behavior, providing you with
-            actionable insights that will drive smarter decision-making and more
-            effective strategies.
+            actionable insights.
           </p>
         </div>
-        <div class="card">
+
+        <div class="card secondary">
           <h3>Email & Chatbot Automation</h3>
           <p>
             Leverage AI to create personalized email campaigns, automate
@@ -341,7 +422,8 @@
             effective and scalable.
           </p>
         </div>
-        <div class="card">
+
+        <div class="card primary">
           <h3>Report Generation & Team Coordination</h3>
           <p>
             Automate report generation and streamline team coordination using AI
@@ -349,7 +431,8 @@
             high-priority tasks.
           </p>
         </div>
-        <div class="card">
+
+        <div class="card secondary">
           <h3>Increase Profits & Lower Costs</h3>
           <p>
             We help you boost profits by optimizing business operations,
@@ -391,7 +474,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-      <h2>email: contact@scalebusinessai.com</h2>
+      <h1>email: contact@scalebusinessai.com</h1>
       <h1>or Send us a message!</h1>
       <form id="contact-form" class="contact-form">
         <label for="name">Name</label>
